@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+   <managed-bean>
+        <managed-bean-name>pifinishingController</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PifinishingController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>pimanpowerController</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PimanpowerController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>pisewingController</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PisewingController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>pishipmentController</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PishipmentController</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>pFinishingChartBean</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PFinishingChartBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>pManpowerChartBean</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PManpowerChartBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>pSewingChartBean</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PSewingChartBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>pShipmentChartBean</managed-bean-name>
+        <managed-bean-class>diu.edu.bd.controller.PShipmentChartBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+</faces-config>

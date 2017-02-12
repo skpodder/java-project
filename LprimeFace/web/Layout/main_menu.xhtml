@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+
+        <title>Facelets Template</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+            <ui:insert name="top">Top</ui:insert>
+        </div>
+        <div>
+            <div id="left">
+                <ui:insert name="left">
+                    <ul>
+                        <li><a href="main_menu.xhtml">HOME</a></li>
+                        <li><a href="cutting.xhtml">CUTTING</a></li>
+                        <li><a href="page2.xhtml">FINISHING</a></li>
+                        <li><a href="page3.xhtml">MANPOWER</a></li>
+                        <li><a href="page4.xhtml">SEWING</a></li>
+                        <li><a href="page5.xhtml">SHIPMENT</a></li>
+                    </ul>
+                </ui:insert>
+            </div>
+            <div>
+                <div id="right">
+                    <ui:insert name="right">
+
+                        <ul>
+                            <li><a href="">REGISTER</a></li>
+                            <li><a href="welcome.xhtml">LOGIN</a></li>
+                            <li><a href="">U_VIDEO</a></li>
+                            <li><a href="">ABOUT</a></li>
+                        </ul>
+                    </ui:insert>
+                </div>
+
+
+                <div id="content" class="right_content">
+                    <ui:insert name="content">
+                        <h1>KEY PERFORMANCE INDICATOR</h1>
+                        <img src="home.jpg" height="400" width="600px" alt=""/>
+                    </ui:insert>
+                </div>
+            </div>
+        </div>
+        <div id="bottom">
+            <ui:insert name="bottom">Bottom</ui:insert>
+        </div>
+
+    </h:body>
+
+</html>

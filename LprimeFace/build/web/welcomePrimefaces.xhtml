@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+         
+    </h:head>
+    <h:body>
+       <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="100" header="KIP Management in Germents " resizable="true" closable="true" collapsible="true">
+                <h:outputText value="Layout content for North" />
+                 <ui:insert name="head"/>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="100" header="Bottom" resizable="true" closable="true" collapsible="true">
+                <h:outputText value="Layout content for South" />
+            </p:layoutUnit>
+
+            <p:layoutUnit position="west" size="200" header="MENU" resizable="true" closable="true" collapsible="true">
+                <h:outputText value="Layout content for West" />
+                 <ul>
+                        <li><a href="fullpage.xhtml">HOME</a></li>
+                        <li><a href="page1.xhtml">CUTTING</a></li>
+                        <li><a href="page2.xhtml">FINISHING</a></li>
+                        <li><a href="page3.xhtml">MANPOWER</a></li>
+                        <li><a href="page4.xhtml">SEWING</a></li>
+                        <li><a href="page5.xhtml">SHIPMENT</a></li>
+                    </ul>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="east" size="200" header="Right" resizable="true" closable="true" collapsible="true" effect="fade">
+                <h:outputText  value="Layout content for Right" />
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <h:outputText value="Welcome to Demo Textile" />
+                <ui:insert  name="content" > content</ui:insert>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+

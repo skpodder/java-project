@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2016 8:48:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="diu.edu.bd.Picutting" table="picutting" catalog="kpi" optimistic-lock="version">
+        <id name="picuttingSerial" type="int">
+            <column name="picuttingSerial" />
+            <generator class="assigned" />
+        </id>
+        <property name="cuttingDate" type="date">
+            <column name="cuttingDate" length="10" />
+        </property>
+        <property name="planCuttingProduction" type="java.lang.Integer">
+            <column name="planCuttingProduction" />
+        </property>
+        <property name="actualCuttingProduction" type="java.lang.Integer">
+            <column name="actualCuttingProduction" />
+        </property>
+        <property name="totalWorkingDay" type="java.lang.Integer">
+            <column name="totalWorkingDay" />
+        </property>
+        <property name="averageWorkinghourCutting" type="java.lang.Integer">
+            <column name="averageWorkinghourCutting" />
+        </property>
+        <property name="cuttingTotalManPower" type="java.lang.Integer">
+            <column name="cuttingTotalManPower" />
+        </property>
+        <property name="totalNoOfManHourAvailableCutting" type="java.lang.Integer">
+            <column name="totalNoOfManHourAvailableCutting" />
+        </property>
+    </class>
+</hibernate-mapping>

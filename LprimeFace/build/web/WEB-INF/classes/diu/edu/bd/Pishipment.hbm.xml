@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2016 8:48:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="diu.edu.bd.Pishipment" table="pishipment" catalog="kpi" optimistic-lock="version">
+        <id name="pishipmentSerial" type="int">
+            <column name="pishipmentSerial" />
+            <generator class="assigned" />
+        </id>
+        <property name="shipmentDate" type="date">
+            <column name="shipmentDate" length="10" />
+        </property>
+        <property name="planShippedQuantityTotal" type="java.lang.Integer">
+            <column name="planShippedQuantityTotal" />
+        </property>
+        <property name="actualShippedQuantityTotal" type="java.lang.Integer">
+            <column name="actualShippedQuantityTotal" />
+        </property>
+    </class>
+</hibernate-mapping>

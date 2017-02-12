@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+               
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+
+                xmlns:p="http://primefaces.org/ui"
+                template="./fullpage.xhtml">
+
+
+
+
+
+    <ui:define name="content">
+        <h:form>  <p:panelGrid columns="2">
+
+                <f:facet name="header">Manpower</f:facet>
+                <h:outputText value="Serial No"/><h:inputText value="#{pimanpowerController.pimanpower.pimanPowerSerial}"/>
+                    <h:outputText value="Date"/><h:inputText value="#{pimanpowerController.pimanpower.date}">
+                        <f:convertDateTime pattern="dd-MM-yyyy"/>
+                        <h:message for="sdt"/>
+                    </h:inputText>
+                        
+                    <h:outputText value="Sweing Operator Present"/><h:inputText value="#{pimanpowerController.pimanpower.sweingOperatorPresent}"/>
+                    <h:outputText value="Sweing Helper Present"/><h:inputText value="#{pimanpowerController.pimanpower.sweingHelperPresent}"/>
+                    <h:outputText value="Sweing Operator Helper Present"/><h:inputText value="#{pimanpowerController.pimanpower.sweingOperatorHelperPresent}"/>
+                    <h:outputText value="Cutting Total Man Power"/><h:inputText value="#{pimanpowerController.pimanpower.cuttingTotalManPower}"/>
+                    <h:outputText value="Finishing Total Man Power"/><h:inputText value="#{pimanpowerController.pimanpower.finishingTotalManPower}"/>
+                    <h:outputText value="Factory Total Man Power"/><h:inputText value="#{pimanpowerController.pimanpower.factoryTotalManPower}"/>
+                    <h:outputText value="Total No Of Man Hour Available Mohel"/><h:inputText value="#{pimanpowerController.pimanpower.totalNoOfManHourAvilableMohel}"/>
+                    <h:outputText value="Total No Of Man Hour Available Cutting"/><h:inputText value="#{pimanpowerController.pimanpower.totalNoOfManHourAvailableCutting}"/>
+                    <h:outputText value="Total No Of Man Hour Available Finishing"/><h:inputText value="#{pimanpowerController.pimanpower.totalNoOfManHourAvailableFinishing}"/>
+                    <h:outputText value="Total No Of Man Hour Available Factory"/><h:inputText value="#{pimanpowerController.pimanpower.totalNoOfManHourAvailableFactory}"/>
+
+                    <f:facet name="footer">
+                        <h:commandButton value="save" action="#{pimanpowerController.save()}" /> 
+                        <h:commandButton value="Update" action="#{pimanpowerController.update()}"/>
+                        <h:commandButton value="Delete" action="#{pimanpowerController.delete()}" />
+                        <h:commandButton value="find" action="#{pimanpowerController.find()}"/>
+                        <h:commandButton value="Display" action="#{pimanpowerController.display()}"/>
+                        <h:commandButton value="Hide" action="#{pimanpowerController.hide()}" />
+
+                    </f:facet>
+
+            </p:panelGrid>  
+            
+            <h:outputText value="#{pimanpowerController.msg}"/>
+            <h:form binding="#{pimanpowerController.tableForm}">
+                    <h:dataTable var="manpower" value="#{pimanpowerController.pimanpowerList}">
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="ID"/></f:facet>
+                            <h:outputText value="#{manpower.pimanPowerSerial}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Date"/></f:facet>
+                            <h:outputText value="#{manpower.date}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Sweing Operator Present"/></f:facet>
+                            <h:outputText value="#{manpower.sweingOperatorPresent}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Sweing Helper Present"/></f:facet>
+                            <h:outputText value="#{manpower.sweingHelperPresent}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Sweing Operator Helper Present"/></f:facet>
+                            <h:outputText value="#{manpower.sweingOperatorHelperPresent}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Cutting Total ManPower"/></f:facet>
+                            <h:outputText value="#{manpower.cuttingTotalManPower}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Finishing Total ManPower"/></f:facet>
+                            <h:outputText value="#{manpower.finishingTotalManPower}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Factory Total ManPower"/></f:facet>
+                            <h:outputText value="#{manpower.factoryTotalManPower}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Total No Of Man Hour Avilable Mohel"/></f:facet>
+                            <h:outputText value="#{manpower.totalNoOfManHourAvilableMohel}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Total No Of Man Hour Avilable Cutting"/></f:facet>
+                            <h:outputText value="#{manpower.totalNoOfManHourAvailableCutting}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Total No Of Man Hour Avilable Finishing"/></f:facet>
+                            <h:outputText value="#{manpower.totalNoOfManHourAvailableFinishing}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Total No Of Man Hour Avilable Factory"/></f:facet>
+                            <h:outputText value="#{manpower.totalNoOfManHourAvailableFactory}"/>
+                        </h:column>
+                    </h:dataTable>
+            </h:form>
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>

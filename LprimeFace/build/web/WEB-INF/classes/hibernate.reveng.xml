@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="kpi"/>
+  <table-filter match-name="pisewing"/>
+  <table-filter match-name="pifinishing"/>
+  <table-filter match-name="picutting"/>
+  <table-filter match-name="pishipment"/>
+  <table-filter match-name="pimanpower"/>
+</hibernate-reverse-engineering>

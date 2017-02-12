@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+               
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+
+                xmlns:p="http://primefaces.org/ui"
+                template="./fullpage.xhtml">
+
+
+
+
+
+    <ui:define name="content">
+        <h:form>  <p:panelGrid columns="2">
+
+                <f:facet name="header">Sewing</f:facet>
+                <h:outputText value="Serial No"/><h:inputText value="#{pisewingController.pisewing.pisewingSerial}"/>
+                <h:outputText value="Sewing Date"/><h:inputText value="#{pisewingController.pisewing.sewingDate}">
+                <f:convertDateTime pattern="dd-MM-yyyy"/>
+                        <h:message for="sdt"/>
+                    </h:inputText>
+
+
+                <h:outputText value="Plan Sewing Production"/><h:inputText value="#{pisewingController.pisewing.planSewingProduction}"/>
+                <h:outputText value="Actual sewing Production"/><h:inputText value="#{pisewingController.pisewing.actualSewingProduction}"/>
+                <h:outputText value="No Of Line Sewing"/><h:inputText value="#{pisewingController.pisewing.noOfLineSewing}"/>
+                <h:outputText value="No Of Line Day Sewing"/><h:inputText value="#{pisewingController.pisewing.noOfLineDaysSewing}"/>
+                <h:outputText value="No Of Line Hour Sewing"/><h:inputText value="#{pisewingController.pisewing.noOfLineHoursSewing}"/>
+                <h:outputText value="Total working Day"/><h:inputText value="#{pisewingController.pisewing.totalWorkingDay}"/>
+                <h:outputText value="Average Working Hour Sewing"/><h:inputText value="#{pisewingController.pisewing.averageWorkinghourSewing}"/>
+                <h:outputText value="Monthly Total RunningMc"/><h:inputText value="#{pisewingController.pisewing.monthlyTotalRunningMc}"/>
+                <h:outputText value="Monthly Average RunningMc"/><h:inputText value="#{pisewingController.pisewing.monthlyAverageRunningMc}"/>
+                <h:outputText value="Factory TotalMc"/><h:inputText value="#{pisewingController.pisewing.factoryTotalMc}"/>
+                <h:outputText value="Sewing Operator Present"/><h:inputText value="#{pisewingController.pisewing.sewingOperatorPresent}"/>
+                <h:outputText value="Sewing Helper Present"/><h:inputText value="#{pisewingController.pisewing.sewingHelperPresent}"/>
+                <h:outputText value="Sewing Operator Helper Present"/><h:inputText value="#{pisewingController.pisewing.sewingOperatorHelperPresent}"/>
+                <h:outputText value="Total No Of Man Hour Available Mohel"/><h:inputText value="#{pisewingController.pisewing.totalNoOfManHourAvilableMohel}"/>
+
+                    <f:facet name="footer">
+                        <h:commandButton value="save" action="#{pisewingController.save()}" /> 
+                        <h:commandButton value="Update" action="#{pisewingController.update()}"/>
+                        <h:commandButton value="Delete" action="#{pisewingController.delete()}" />
+                        <h:commandButton value="find" action="#{pisewingController.find()}"/>
+                        <h:commandButton value="Display" action="#{pisewingController.display()}"/>
+                        <h:commandButton value="Hide" action="#{pisewingController.hide()}" />
+
+                    </f:facet>
+
+            </p:panelGrid>  
+            <h:outputText value="#{pisewingController.msg}"/>
+            
+            <h:form binding="#{pisewingController.tableForm}">
+                    <h:dataTable var="sewing" value="#{pisewingController.pisewingList}">
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="ID"/></f:facet>
+                            <h:outputText value="#{sewing.pisewingSerial}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Sewing Date"/></f:facet>
+                            <h:outputText value="#{sewing.sewingDate}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Plan Sewing Production"/></f:facet>
+                            <h:outputText value="#{sewing.planSewingProduction}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Actual Sewing roduction"/></f:facet>
+                            <h:outputText value="#{sewing.actualSewingProduction}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="No Of Line Sewing"/></f:facet>
+                            <h:outputText value="#{sewing.noOfLineSewing}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="No Of Line Day Sewing"/></f:facet>
+                            <h:outputText value="#{sewing.noOfLineDaysSewing}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="No Of Line Hours Sewing"/></f:facet>
+                            <h:outputText value="#{sewing.noOfLineHoursSewing}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Total Working Day"/></f:facet>
+                            <h:outputText value="#{sewing.totalWorkingDay}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Average Workinghour Sewing"/></f:facet>
+                            <h:outputText value="#{sewing.averageWorkinghourSewing}"/>
+                        </h:column>
+                        
+                          <h:column>
+                            <f:facet name="header"><h:outputText value="Monthly Total RunningMc"/></f:facet>
+                            <h:outputText value="#{sewing.monthlyTotalRunningMc}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Monthly Average RunningMc"/></f:facet>
+                            <h:outputText value="#{sewing.monthlyAverageRunningMc}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Factory TotalMc"/></f:facet>
+                            <h:outputText value="#{sewing.factoryTotalMc}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Sewing Operator Present"/></f:facet>
+                            <h:outputText value="#{sewing.sewingOperatorPresent}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Sewing Helper Present"/></f:facet>
+                            <h:outputText value="#{sewing.sewingHelperPresent}"/>
+                        </h:column>
+                        
+                         <h:column>
+                            <f:facet name="header"><h:outputText value="Sewing Operator Helper Present"/></f:facet>
+                            <h:outputText value="#{sewing.sewingOperatorHelperPresent}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Total No Of Man Hour Avilable Mohel"/></f:facet>
+                            <h:outputText value="#{sewing.totalNoOfManHourAvilableMohel}"/>
+                        </h:column>
+                    </h:dataTable> 
+                
+            </h:form>
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>

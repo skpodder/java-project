@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2016 8:48:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="diu.edu.bd.Pimanpower" table="pimanpower" catalog="kpi" optimistic-lock="version">
+        <id name="pimanPowerSerial" type="int">
+            <column name="pimanPowerSerial" />
+            <generator class="assigned" />
+        </id>
+        <property name="date" type="date">
+            <column name="date" length="10" />
+        </property>
+        <property name="sweingOperatorPresent" type="java.lang.Integer">
+            <column name="sweingOperatorPresent" />
+        </property>
+        <property name="sweingHelperPresent" type="java.lang.Integer">
+            <column name="sweingHelperPresent" />
+        </property>
+        <property name="sweingOperatorHelperPresent" type="java.lang.Integer">
+            <column name="sweingOperatorHelperPresent" />
+        </property>
+        <property name="cuttingTotalManPower" type="java.lang.Integer">
+            <column name="cuttingTotalManPower" />
+        </property>
+        <property name="finishingTotalManPower" type="java.lang.Integer">
+            <column name="finishingTotalManPower" />
+        </property>
+        <property name="factoryTotalManPower" type="java.lang.Integer">
+            <column name="factoryTotalManPower" />
+        </property>
+        <property name="totalNoOfManHourAvilableMohel" type="java.lang.Integer">
+            <column name="totalNoOfManHourAvilableMohel" />
+        </property>
+        <property name="totalNoOfManHourAvailableCutting" type="java.lang.Integer">
+            <column name="totalNoOfManHourAvailableCutting" />
+        </property>
+        <property name="totalNoOfManHourAvailableFinishing" type="java.lang.Integer">
+            <column name="totalNoOfManHourAvailableFinishing" />
+        </property>
+        <property name="totalNoOfManHourAvailableFactory" type="java.lang.Integer">
+            <column name="totalNoOfManHourAvailableFactory" />
+        </property>
+    </class>
+</hibernate-mapping>

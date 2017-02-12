@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+         <h:outputStylesheet name="./css/fulpage.css"/>
+    </h:head>
+    <h:body>
+       <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="160" header="KPI MANAGEMENT FOR GARMENTS INDUSTRY" resizable="true" closable="true" collapsible="true">
+                <h:outputText value="" />
+                <ui:insert id="header" name="head">
+                    <img src="../image/header2.jpg" height="100px" width="1200px" alt=""/>
+                </ui:insert>
+            </p:layoutUnit>
+
+           <p:layoutUnit id="bottom" position="south" size="100" header="ABOUT US" resizable="true" closable="true" collapsible="true">
+               <h:outputText id="bottom_text" value="@Copyright 2016_DIU.. All rights received"/>
+                
+                    <img src="../image/contact.jpg" height="45px" width="150px" align="right" alt=""/>
+            
+            </p:layoutUnit>
+
+           <p:layoutUnit id="menu" position="west" size="200" header="MENU" resizable="true" closable="true" collapsible="true">
+               
+                 <ul >
+                        <li><a href="fullpage.xhtml">HOME</a></li>
+                        <li><a href="page1.xhtml">CUTTING</a></li>
+                        <li><a href="page2.xhtml">FINISHING</a></li>
+                        <li><a href="page3.xhtml">MANPOWER</a></li>
+                        <li><a href="page4.xhtml">SEWING</a></li>
+                        <li><a href="page5.xhtml">SHIPMENT</a></li>
+                    </ul>
+            </p:layoutUnit>
+
+           <p:layoutUnit id="DASHBOARD" position="east" size="200" header="DASHBOARD" resizable="true" closable="true" collapsible="true" effect="fade">
+                <h:outputText  value="" />
+                
+                <ul >
+                        
+                    <li><a href="cuttingBarchart.xhtml">CUTTING</a></li>
+                    <li><a href="finishingBarcart.xhtml">FINISHING</a></li>
+                    <li><a href="manpowerBarchart.xhtml">MANPOWER</a></li>
+                    <li><a href="sewingBarchart.xhtml">SEWING</a></li>
+                    <li><a href="shipmentBarchart.xhtml">SHIPMENT</a></li>
+                    
+                    </ul>
+            </p:layoutUnit>
+
+           <p:layoutUnit  position="center">
+                <h:outputText value="" />
+                <ui:insert id="center_content" name="content" >
+                   
+                    <img src="../image/home.jpg" height="350" width="700px"  alt=""/>
+                </ui:insert>
+            </p:layoutUnit>
+        </p:layout>
+    </h:body>
+</html>
+

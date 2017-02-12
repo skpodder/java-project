@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+               
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+
+                xmlns:p="http://primefaces.org/ui"
+                template="./fullpage.xhtml">
+
+
+
+
+
+    <ui:define name="content">
+        <h:form>  <p:panelGrid columns="2">
+
+                <f:facet name="header">Shipment</f:facet>
+                <h:outputText value="serial No"/><h:inputText value="#{pishipmentController.pishipment.pishipmentSerial}"/>
+                <h:outputText value="Shipment Date"/><h:inputText value="#{pishipmentController.pishipment.shipmentDate}">
+                    <f:convertDateTime pattern="dd-MM-yyyy"/>
+                        <h:message for="sdt"/>
+                    </h:inputText>
+                    
+                <h:outputText value="Plan Quality Total"/><h:inputText value="#{pishipmentController.pishipment.planShippedQuantityTotal}"/>
+                <h:outputText value="Actual Quality Total"/><h:inputText value="#{pishipmentController.pishipment.actualShippedQuantityTotal}"/>
+
+                    <f:facet name="footer">
+                        <h:commandButton value="save" action="#{pishipmentController.save()}"/> 
+                        <h:commandButton value="Update" action="#{pishipmentController.update()}" />
+
+                        <h:commandButton value="find" action="#{pishipmentController.find()}"/>
+                        
+                        <h:commandButton value="Delete" action="#{pishipmentController.delete()}"/>
+                        <h:commandButton value="Display" action="#{pishipmentController.display()}" />
+                        <h:commandButton value="hide" action="#{pishipmentController.hide()}"/>
+                    </f:facet>
+
+            </p:panelGrid>  
+            
+             <h:outputText value="#{pishipmentController.msg}"/>
+             
+             <h:form binding="#{pishipmentController.tableForm}">
+                    
+                    <h:dataTable var="shipment" value="#{pishipmentController.pishipmentList}">
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="ID"/></f:facet>
+                            <h:outputText value="#{shipment.pishipmentSerial}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Date"/></f:facet>
+                            <h:outputText value="#{shipment.shipmentDate}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Plan Quality Total"/></f:facet>
+                            <h:outputText value="#{shipment.planShippedQuantityTotal}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header"><h:outputText value="Actual Quality Total"/></f:facet>
+                            <h:outputText value="#{shipment.actualShippedQuantityTotal}"/>
+                        </h:column>
+                    </h:dataTable>
+                 
+                 </h:form>
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./fullpage.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+
+                xmlns:p="http://primefaces.org/ui"
+      >
+
+    <body>
+
+        <ui:composition template="./main_menu.xhtml">
+
+            <ui:define name="content">
+               <h:form>  <p:panelGrid columns="2">
+
+                <f:facet name="header">Picutting</f:facet>
+                <p:outputLabel value="Serial No"/><p:inputText value=""/>
+                <h:outputText value="Cutting Date"/><h:inputText id="sdt" value=""/>
+                <h:outputText value="Plan Cutting Production"/><h:inputText value=""/>
+                <h:outputText value="Actual Cutting Production"/> <h:inputText value=""/>
+                <h:outputText value="Total working day"/> <h:inputText value=""/>
+                <h:outputText value="Average working hour cutting"/> <h:inputText value=""/>
+                <h:outputText value="cutting total manpower"/> <h:inputText value=""/>
+                <h:outputText value="Total no of man hour available cutting"/> <h:inputText value=""/>
+
+                <f:facet name="footer">
+                    <h:commandButton value="save" /> 
+                    <h:commandButton value="Update" />
+
+                    <h:commandButton value="find" />
+                    <h:commandButton value="Display" />
+                    <h:commandButton value="Delete"  />
+
+                </f:facet>
+
+            </p:panelGrid>  
+        </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

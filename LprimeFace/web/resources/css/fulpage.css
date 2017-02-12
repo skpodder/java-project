@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 4, 2016, 12:21:53 PM
+    Author     : sagar
+
+DASHBOARD
+*/
+#menu {
+    float: left;
+    background-color:  #1ED3FC;
+    //padding: 5px;
+    //width: 150px;
+    //height: 535px;
+   //border: none;
+    overflow: hidden;
+}
+#menu ul{margin:0;  padding:0; list-style:none; }
+#menu ul li a{display:block; padding:8px; color:black;  font-weight:normal; text-decoration: none; font-size: 14px; font-weight: bold;}
+#menu ul li a:hover{color:white;background:#1ED3FC; border-radius:8px; text-decoration: none}
+
+#DASHBOARD {
+    float: left;
+    background-color:#1ED3FC;
+    //padding: 5px;
+    //width: 150px;
+    //height: 535px;
+   //border: none;
+    overflow: hidden;
+}
+#DASHBOARD ul{margin:0;  padding:0; list-style:none; }
+#DASHBOARD ul li a{display:block; padding:8px; color:black;  font-weight:normal; text-decoration: none;font-size: 14px; font-weight: bold}
+#DASHBOARD ul li a:hover{color:white;background:#1ED3FC; border-radius:8px; text-decoration: none; }
+
+
+
+
+#center_content{
+    background: activeborder;
+    
+}
+
+#bottom{
+    
+    
+   background-color:   #1ED3FC;
+}
+#bottom_text{
+    
+    color: black;
+   margin-top: 20px;
+   font-style: italic;
+   
+        
+}

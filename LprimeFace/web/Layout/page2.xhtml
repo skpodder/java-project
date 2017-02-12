@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+               
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+
+                xmlns:p="http://primefaces.org/ui"
+                template="./fullpage.xhtml"
+                >
+
+
+
+
+
+    <ui:define name="content">
+        <h:form>  
+            
+            
+            
+            <p:panelGrid columns="2">
+
+                <f:facet name="header">Finishing</f:facet>
+                <h:outputText value="Pifinishing Serial"/><h:inputText value="#{pifinishingController.pifinishing.pifinishingSerial}"/>
+                <h:outputText value="Finishing Date"/><h:inputText id="std" value="#{pifinishingController.pifinishing.finishingDate}">
+                     <f:convertDateTime pattern="dd-MM-yyyy" />
+                    <h:message for="sdt"/>
+                </h:inputText>
+
+                <h:outputText value="Plan finishing Production"/><h:inputText value="#{pifinishingController.pifinishing.planFinishingProduction}"/>
+                <h:outputText value="Actual Finishing Production"/><h:inputText value="#{pifinishingController.pifinishing.actualFinishingProduction}"/>
+                <h:outputText value="Total Working Day"/><h:inputText value="#{pifinishingController.pifinishing.totalWorkingDay}"/>
+                <h:outputText value="Average Working Hour Finishing"/><h:inputText value="#{pifinishingController.pifinishing.averageWorkinghourFinishing}"/>
+                <h:outputText value="Finishing Toatal ManPower"/><h:inputText value="#{pifinishingController.pifinishing.finishingTotalManPower}"/>
+                <h:outputText value="Total NO OF Man Hour Available Finishing"/><h:inputText value="#{pifinishingController.pifinishing.totalNoOfManHourAvailableFinishing}"/>
+
+                    <f:facet name="footer">
+                        <h:commandButton value="save" action="#{pifinishingController.save()}" /> 
+                        <h:commandButton value="Update" action="#{pifinishingController.update()}"/>
+                        <h:commandButton value="Delete" action="#{pifinishingController.delete()}" />
+                        <h:commandButton value="find" action="#{pifinishingController.find()}"/>
+                        <h:commandButton value="Display" action="#{pifinishingController.display()}"/>
+                        <h:commandButton value="Hide" action="#{pifinishingController.hide()}" />
+                        
+
+                    </f:facet>
+                
+
+            </p:panelGrid>  
+            
+            <h:outputText value="#{pifinishingController.msg}"/>
+            <h:form binding="#{pifinishingController.tableForm}">
+            <h:dataTable var="finishing" value="#{pifinishingController.pifinishingList}">
+                <h:column>
+                    <f:facet name="header"><h:outputText value="ID"/></f:facet>
+                    <h:outputText value="#{finishing.pifinishingSerial}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Finishing Date"/></f:facet>
+                    <h:outputText value="#{finishing.finishingDate}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Plan Finishing Production"/></f:facet>
+                    <h:outputText value="#{finishing.planFinishingProduction}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Actual Finishing Production"/></f:facet>
+                    <h:outputText value="#{finishing.actualFinishingProduction}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Total Working Day"/></f:facet>
+                    <h:outputText value="#{finishing.totalWorkingDay}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Average Workinghour Finishing"/></f:facet>
+                    <h:outputText value="#{finishing.averageWorkinghourFinishing}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Finishing Total ManPower"/></f:facet>
+                    <h:outputText value="#{finishing.finishingTotalManPower}"/>
+                </h:column>
+                
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Total No Of Man Hour Available Finishing"/></f:facet>
+                    <h:outputText value="#{finishing.totalNoOfManHourAvailableFinishing}"/>
+                </h:column>
+            </h:dataTable>
+                </h:form>
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>

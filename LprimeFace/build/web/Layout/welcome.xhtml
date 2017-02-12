@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/page1.css"/>
+        <title>Facelets Template</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+            <ui:insert name="top">Top</ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <h1 class="text">BANGLADESH TEXTILE DHAKA</h1>
+
+            <div id="sagar">
+                <h:form>  <p:panelGrid  columns="2">
+
+                    <f:facet name="header">WELCOME TO USER LOGIN</f:facet>
+                    <p:outputLabel value="VALID MAIL"/><p:inputText value=""/>
+                    <h:outputText value="PASSWORD"/><h:inputText id="sdt" value=""/>
+
+
+                 
+
+                </p:panelGrid> 
+                   <div id="box">
+                       <ul>
+                           <li><a href="main_menu.xhtml">LOGIN</a></li>
+                       </ul>
+		</div>
+            </h:form>
+            </div>
+
+
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">Bottom</ui:insert>
+        </div>
+
+    </h:body>
+
+</html>

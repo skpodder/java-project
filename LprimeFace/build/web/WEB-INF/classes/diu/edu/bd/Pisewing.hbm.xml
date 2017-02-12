@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 4, 2016 8:48:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="diu.edu.bd.Pisewing" table="pisewing" catalog="kpi" optimistic-lock="version">
+        <id name="pisewingSerial" type="int">
+            <column name="pisewingSerial" />
+            <generator class="assigned" />
+        </id>
+        <property name="sewingDate" type="date">
+            <column name="sewingDate" length="10" />
+        </property>
+        <property name="planSewingProduction" type="java.lang.Integer">
+            <column name="planSewingProduction" />
+        </property>
+        <property name="actualSewingProduction" type="java.lang.Integer">
+            <column name="actualSewingProduction" />
+        </property>
+        <property name="noOfLineSewing" type="java.lang.Integer">
+            <column name="noOfLineSewing" />
+        </property>
+        <property name="noOfLineDaysSewing" type="java.lang.Integer">
+            <column name="noOfLineDaysSewing" />
+        </property>
+        <property name="noOfLineHoursSewing" type="java.lang.Integer">
+            <column name="noOfLineHoursSewing" />
+        </property>
+        <property name="totalWorkingDay" type="java.lang.Integer">
+            <column name="totalWorkingDay" />
+        </property>
+        <property name="averageWorkinghourSewing" type="java.lang.Integer">
+            <column name="averageWorkinghourSewing" />
+        </property>
+        <property name="monthlyTotalRunningMc" type="java.lang.Integer">
+            <column name="monthlyTotalRunningMc" />
+        </property>
+        <property name="monthlyAverageRunningMc" type="java.lang.Integer">
+            <column name="monthlyAverageRunningMc" />
+        </property>
+        <property name="factoryTotalMc" type="java.lang.Integer">
+            <column name="factoryTotalMc" />
+        </property>
+        <property name="sewingOperatorPresent" type="java.lang.Integer">
+            <column name="sewingOperatorPresent" />
+        </property>
+        <property name="sewingHelperPresent" type="java.lang.Integer">
+            <column name="sewingHelperPresent" />
+        </property>
+        <property name="sewingOperatorHelperPresent" type="java.lang.Integer">
+            <column name="sewingOperatorHelperPresent" />
+        </property>
+        <property name="totalNoOfManHourAvilableMohel" type="java.lang.Integer">
+            <column name="totalNoOfManHourAvilableMohel" />
+        </property>
+    </class>
+</hibernate-mapping>

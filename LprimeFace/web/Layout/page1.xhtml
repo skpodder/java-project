@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+               
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+
+                xmlns:p="http://primefaces.org/ui"
+                template="./fullpage.xhtml">
+
+
+
+
+
+    <ui:define name="content">
+        
+        <h:form>
+            
+            <p:panelGrid columns="2">
+
+                <f:facet name="header">Cutting</f:facet>
+                
+                
+                
+                <h:outputText value="Serial No"/><h:inputText value="#{picuttingController.picutting.picuttingSerial}"/>
+                <h:outputText value="Cutting Date"/><h:inputText id="sdt" value="#{picuttingController.picutting.cuttingDate}">
+                    <f:convertDateTime pattern="dd-MM-yyyy" />
+                    <h:message for="sdt"/>
+                    </h:inputText>
+                <h:outputText value="Plan Cutting Production"/><h:inputText value="#{picuttingController.picutting.planCuttingProduction}"/>
+                <h:outputText value="Actual Cutting Production"/> <h:inputText value="#{picuttingController.picutting.actualCuttingProduction}"/>
+                <h:outputText value="Total working day"/> <h:inputText value="#{picuttingController.picutting.totalWorkingDay}"/>
+                <h:outputText value="Average working hour cutting"/> <h:inputText value="#{picuttingController.picutting.averageWorkinghourCutting}"/>
+                <h:outputText value="cutting total manpower"/> <h:inputText value="#{picuttingController.picutting.cuttingTotalManPower}"/>
+                <h:outputText value="Total no of man hour available cutting"/> <h:inputText value="#{picuttingController.picutting.totalNoOfManHourAvailableCutting}"/>
+                   
+                 <f:facet name="footer">
+                    <h:commandButton value="save" action="#{picuttingController.save()}" /> 
+                    <h:commandButton value="Update" action="#{picuttingController.update()}"/>
+                     <h:commandButton value="Delete" action="#{picuttingController.delete()}" />
+                    
+                    <h:commandButton value="find" action="#{picuttingController.find()}"/>
+                     <h:commandButton value="Display"  action="#{picuttingController.display()}"/>
+                <h:commandButton value="Hide" action="#{picuttingController.hide()}"/>
+                 
+                </f:facet>
+                
+            </p:panelGrid> 
+        
+            <h:outputText value="#{picuttingController.msg}"/>
+            
+            <h:form binding="#{picuttingController.tableForm}">
+            <h:dataTable var="cutting" value="#{picuttingController.picuttingList}">
+                <h:column >
+                    <f:facet name="header"><h:outputText value="ID"/></f:facet>
+                    <h:outputText value="#{cutting.picuttingSerial}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="DATE"/></f:facet>
+                    <h:outputText value="#{cutting.cuttingDate}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Cutting Production"/></f:facet>
+                    <h:outputText value="#{cutting.planCuttingProduction}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="actual Cutting Production"/></f:facet>
+                    <h:outputText value="#{cutting.actualCuttingProduction}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="total working Day"/></f:facet>
+                    <h:outputText value="#{cutting.totalWorkingDay}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Average working cutting "/></f:facet>
+                    <h:outputText value="#{cutting.averageWorkinghourCutting}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Cutting Total Manpower "/></f:facet>
+                    <h:outputText value="#{cutting.cuttingTotalManPower}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"><h:outputText value="Total No Of ManHour Available Cutting "/></f:facet>
+                    <h:outputText value="#{cutting.totalNoOfManHourAvailableCutting}"/>
+                </h:column>
+            </h:dataTable>
+                </h:form>
+           </h:form>
+    </ui:define>
+
+
+
+</ui:composition>
